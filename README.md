@@ -1,8 +1,8 @@
 Chain
 =====
 This was a test project to test the speed of native PHP arrays vs. a chain
-implemented in pure PHP objects as wrappers for a chain itself and each chain
-element. It doesn't use arrays internally.
+implemented in pure PHP objects. Two classes are used: one as wrapper for a chain
+itself and one as each chain element holder. It doesn't utilize arrays internally.
 
 The results are: Iterating over `Chain` is 10 times slower than over native PHP
 array implementation even that PHP's arrays are hashes by it's nature.
