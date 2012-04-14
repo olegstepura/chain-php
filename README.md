@@ -7,6 +7,11 @@ element. It doesn't use arrays internally.
 The results are: Iterating over `Chain` is 10 times slower than over native PHP
 array implementation even that PHP's arrays are hashes by it's nature.
 It's even about 6-8 times slower than PHP class wrapper of an array.
+Random access is more than 200 times slower than in random access to elements
+in raw PHP arrays.
+
+You can test speed itself - just uncomment `$measure = true;` in
+`ChainTest::testSpeed()` in tests folder and run `phpunit`.
 
 So probably you won't like to use this. If find this usefull for anything,
 please let me know the use-case.
@@ -16,6 +21,7 @@ API
 ---
 
 API is simple.
+
 ``` php
 <?php
 use Ost\Chain\Chain;

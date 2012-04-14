@@ -61,6 +61,7 @@ class ChainTest extends \PHPUnit_Framework_TestCase
 
         $iterations = 100;
         $arraySize = 1000;
+        var_dump('iterating');
         $time = microtime(true);
         for ($i = 0; $i < $iterations; $i++) {
             $a = array();
@@ -81,6 +82,27 @@ class ChainTest extends \PHPUnit_Framework_TestCase
             foreach ($a as $el) {
                 $el += '123';
             }
+        }
+        var_dump(microtime(true) - $time);
+
+        var_dump('random access');
+        $a = array();
+        for ($j = 0; $j < $arraySize; $j++) {
+            $a[] = str_repeat($j, 10);
+        }
+        $time = microtime(true);
+        for ($i = 0; $i < $iterations; $i++) {
+            $test = $a[rand(0, $arraySize - 1)];
+        }
+        var_dump(microtime(true) - $time);
+
+        $a = new Chain();
+        for ($j = 0; $j < $arraySize; $j++) {
+            $a->add(str_repeat($j, 10));
+        }
+        $time = microtime(true);
+        for ($i = 0; $i < $iterations; $i++) {
+            $test = $a->get(rand(0, $arraySize - 1));
         }
         var_dump(microtime(true) - $time);
     }
