@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="Ost Primitive Test Suite">
+            <directory>./tests/Ost/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
