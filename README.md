@@ -10,7 +10,7 @@ It's even about 6-8 times slower than PHP class wrapper of an array.
 Random access is more than 200 times slower than in random access to elements
 in raw PHP arrays.
 
-You can test speed itself - just uncomment `$measure = true;` in
+You can test speed yourself - just uncomment `$measure = true;` in
 `ChainTest::testSpeed()` in tests folder and run `phpunit`.
 
 So probably you won't like to use this. If find this usefull for anything,
