@@ -16,6 +16,7 @@ API
 ---
 
 API is simple.
+
 ``` php
 <?php
 use Ost\Chain\Chain;
